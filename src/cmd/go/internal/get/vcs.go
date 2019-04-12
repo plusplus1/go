@@ -981,6 +981,26 @@ var vcsPaths = []*vcsPath{
 		check:  noVCSSuffix,
 	},
 
+	// gitlab.intra.yongqianbao.com
+	{
+		prefix: "gitlab.intra.yongqianbao.com/",
+		re:     `^(?P<root>gitlab\.intra\.yongqianbao\.com/(?P<p>[A-Za-z0-9_.\-]+/[A-Za-z0-9_.\-]+))(/[\p{L}0-9_.\-]+)*$`,
+		vcs:    "git",
+		repo:   "ssh://git@gitlab.intra.yongqianbao.com/{p}.git",
+		ping:   false,
+	},
+
+	/*
+	   // golang.org/x
+	   {
+	           prefix: "golang.org/",
+	           re:     `^(?P<root>golang\.org/x/(?P<p>[A-Za-z0-9_.\-]+))(/[\p{L}0-9_.\-]+)*$`,
+	           vcs:    "git",
+	           repo:   "https://github.com/golang/{p}",
+	           ping:   false,
+	   },
+	*/
+
 	// Bitbucket
 	{
 		prefix: "bitbucket.org/",
